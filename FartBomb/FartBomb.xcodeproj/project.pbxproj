@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9B561C1209243F9006E5D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B561C0209243F9006E5D48 /* AppDelegate.swift */; };
+		B9B561C3209243F9006E5D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B561C2209243F9006E5D48 /* ViewController.swift */; };
+		B9B561C6209243F9006E5D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B561C4209243F9006E5D48 /* Main.storyboard */; };
+		B9B561C8209243FB006E5D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B561C7209243FB006E5D48 /* Assets.xcassets */; };
+		B9B561CB209243FB006E5D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B561C9209243FB006E5D48 /* LaunchScreen.storyboard */; };
+		B9B561D82092441F006E5D48 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B561D62092441F006E5D48 /* Interface.storyboard */; };
+		B9B561DA20924420006E5D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B561D920924420006E5D48 /* Assets.xcassets */; };
+		B9B561E120924420006E5D48 /* FartBombWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B9B561E020924420006E5D48 /* FartBombWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B9B561E620924420006E5D48 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B561E520924420006E5D48 /* InterfaceController.swift */; };
+		B9B561E820924420006E5D48 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B561E720924420006E5D48 /* ExtensionDelegate.swift */; };
+		B9B561EA20924420006E5D48 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B561E920924420006E5D48 /* NotificationController.swift */; };
+		B9B561EC20924421006E5D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B561EB20924421006E5D48 /* Assets.xcassets */; };
+		B9B561F120924421006E5D48 /* FartBombWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B9B561D42092441F006E5D48 /* FartBombWatchOS.app */; };
+		B9EDC82B20924F6700AE240D /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EDC82A20924F6600AE240D /* Audio.swift */; };
+		B9EDC82D20924F7B00AE240D /* Fart1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9EDC82C20924F7B00AE240D /* Fart1.mp3 */; };
+		B9EDC82F20925B8600AE240D /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EDC82E20925B8600AE240D /* DeviceManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9B561E220924420006E5D48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9B561B5209243F8006E5D48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B561DF20924420006E5D48;
+			remoteInfo = "FartBombWatchOS Extension";
+		};
+		B9B561EF20924421006E5D48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9B561B5209243F8006E5D48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B561D32092441F006E5D48;
+			remoteInfo = FartBombWatchOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9B561F520924421006E5D48 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B9B561E120924420006E5D48 /* FartBombWatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B561F920924421006E5D48 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B9B561F120924421006E5D48 /* FartBombWatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B9B561BD209243F8006E5D48 /* FartBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FartBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B561C0209243F9006E5D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9B561C2209243F9006E5D48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9B561C5209243F9006E5D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9B561C7209243FB006E5D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9B561CA209243FB006E5D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9B561CC209243FB006E5D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B561D42092441F006E5D48 /* FartBombWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FartBombWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B561D72092441F006E5D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B9B561D920924420006E5D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9B561DB20924420006E5D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B561E020924420006E5D48 /* FartBombWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FartBombWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B561E520924420006E5D48 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B9B561E720924420006E5D48 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B9B561E920924420006E5D48 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B9B561EB20924421006E5D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9B561ED20924421006E5D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B561EE20924421006E5D48 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B9EDC82A20924F6600AE240D /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		B9EDC82C20924F7B00AE240D /* Fart1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fart1.mp3; sourceTree = "<group>"; };
+		B9EDC82E20925B8600AE240D /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9B561BA209243F8006E5D48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B561DD20924420006E5D48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9B561B4209243F8006E5D48 = {
+			isa = PBXGroup;
+			children = (
+				B9B561BF209243F8006E5D48 /* FartBomb */,
+				B9B561D52092441F006E5D48 /* FartBombWatchOS */,
+				B9B561E420924420006E5D48 /* FartBombWatchOS Extension */,
+				B9B561BE209243F8006E5D48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9B561BE209243F8006E5D48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B561BD209243F8006E5D48 /* FartBomb.app */,
+				B9B561D42092441F006E5D48 /* FartBombWatchOS.app */,
+				B9B561E020924420006E5D48 /* FartBombWatchOS Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9B561BF209243F8006E5D48 /* FartBomb */ = {
+			isa = PBXGroup;
+			children = (
+				B9EDC82C20924F7B00AE240D /* Fart1.mp3 */,
+				B9EDC82E20925B8600AE240D /* DeviceManager.swift */,
+				B9B561C0209243F9006E5D48 /* AppDelegate.swift */,
+				B9B561C2209243F9006E5D48 /* ViewController.swift */,
+				B9B561C4209243F9006E5D48 /* Main.storyboard */,
+				B9B561C7209243FB006E5D48 /* Assets.xcassets */,
+				B9B561C9209243FB006E5D48 /* LaunchScreen.storyboard */,
+				B9B561CC209243FB006E5D48 /* Info.plist */,
+				B9EDC82A20924F6600AE240D /* Audio.swift */,
+			);
+			path = FartBomb;
+			sourceTree = "<group>";
+		};
+		B9B561D52092441F006E5D48 /* FartBombWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9B561D62092441F006E5D48 /* Interface.storyboard */,
+				B9B561D920924420006E5D48 /* Assets.xcassets */,
+				B9B561DB20924420006E5D48 /* Info.plist */,
+			);
+			path = FartBombWatchOS;
+			sourceTree = "<group>";
+		};
+		B9B561E420924420006E5D48 /* FartBombWatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B9B561E520924420006E5D48 /* InterfaceController.swift */,
+				B9B561E720924420006E5D48 /* ExtensionDelegate.swift */,
+				B9B561E920924420006E5D48 /* NotificationController.swift */,
+				B9B561EB20924421006E5D48 /* Assets.xcassets */,
+				B9B561ED20924421006E5D48 /* Info.plist */,
+				B9B561EE20924421006E5D48 /* PushNotificationPayload.apns */,
+			);
+			path = "FartBombWatchOS Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9B561BC209243F8006E5D48 /* FartBomb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B561CF209243FB006E5D48 /* Build configuration list for PBXNativeTarget "FartBomb" */;
+			buildPhases = (
+				B9B561B9209243F8006E5D48 /* Sources */,
+				B9B561BA209243F8006E5D48 /* Frameworks */,
+				B9B561BB209243F8006E5D48 /* Resources */,
+				B9B561F920924421006E5D48 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B561F020924421006E5D48 /* PBXTargetDependency */,
+			);
+			name = FartBomb;
+			productName = FartBomb;
+			productReference = B9B561BD209243F8006E5D48 /* FartBomb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9B561D32092441F006E5D48 /* FartBombWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B561F620924421006E5D48 /* Build configuration list for PBXNativeTarget "FartBombWatchOS" */;
+			buildPhases = (
+				B9B561D22092441F006E5D48 /* Resources */,
+				B9B561F520924421006E5D48 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B561E320924420006E5D48 /* PBXTargetDependency */,
+			);
+			name = FartBombWatchOS;
+			productName = FartBombWatchOS;
+			productReference = B9B561D42092441F006E5D48 /* FartBombWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B9B561DF20924420006E5D48 /* FartBombWatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B561F220924421006E5D48 /* Build configuration list for PBXNativeTarget "FartBombWatchOS Extension" */;
+			buildPhases = (
+				B9B561DC20924420006E5D48 /* Sources */,
+				B9B561DD20924420006E5D48 /* Frameworks */,
+				B9B561DE20924420006E5D48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FartBombWatchOS Extension";
+			productName = "FartBombWatchOS Extension";
+			productReference = B9B561E020924420006E5D48 /* FartBombWatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9B561B5209243F8006E5D48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Giovanni Bruno";
+				TargetAttributes = {
+					B9B561BC209243F8006E5D48 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					B9B561D32092441F006E5D48 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					B9B561DF20924420006E5D48 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = B9B561B8209243F8006E5D48 /* Build configuration list for PBXProject "FartBomb" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9B561B4209243F8006E5D48;
+			productRefGroup = B9B561BE209243F8006E5D48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9B561BC209243F8006E5D48 /* FartBomb */,
+				B9B561D32092441F006E5D48 /* FartBombWatchOS */,
+				B9B561DF20924420006E5D48 /* FartBombWatchOS Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9B561BB209243F8006E5D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B561CB209243FB006E5D48 /* LaunchScreen.storyboard in Resources */,
+				B9B561C8209243FB006E5D48 /* Assets.xcassets in Resources */,
+				B9EDC82D20924F7B00AE240D /* Fart1.mp3 in Resources */,
+				B9B561C6209243F9006E5D48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B561D22092441F006E5D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B561DA20924420006E5D48 /* Assets.xcassets in Resources */,
+				B9B561D82092441F006E5D48 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B561DE20924420006E5D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B561EC20924421006E5D48 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9B561B9209243F8006E5D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9EDC82B20924F6700AE240D /* Audio.swift in Sources */,
+				B9EDC82F20925B8600AE240D /* DeviceManager.swift in Sources */,
+				B9B561C3209243F9006E5D48 /* ViewController.swift in Sources */,
+				B9B561C1209243F9006E5D48 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B561DC20924420006E5D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B561EA20924420006E5D48 /* NotificationController.swift in Sources */,
+				B9B561E820924420006E5D48 /* ExtensionDelegate.swift in Sources */,
+				B9B561E620924420006E5D48 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9B561E320924420006E5D48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B561DF20924420006E5D48 /* FartBombWatchOS Extension */;
+			targetProxy = B9B561E220924420006E5D48 /* PBXContainerItemProxy */;
+		};
+		B9B561F020924421006E5D48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B561D32092441F006E5D48 /* FartBombWatchOS */;
+			targetProxy = B9B561EF20924421006E5D48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9B561C4209243F9006E5D48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B561C5209243F9006E5D48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9B561C9209243FB006E5D48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B561CA209243FB006E5D48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B9B561D62092441F006E5D48 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B561D72092441F006E5D48 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9B561CD209243FB006E5D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9B561CE209243FB006E5D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9B561D0209243FB006E5D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				INFOPLIST_FILE = FartBomb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9B561D1209243FB006E5D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				INFOPLIST_FILE = FartBomb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B9B561F320924421006E5D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				INFOPLIST_FILE = "FartBombWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		B9B561F420924421006E5D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				INFOPLIST_FILE = "FartBombWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		B9B561F720924421006E5D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				IBSC_MODULE = FartBombWatchOS_Extension;
+				INFOPLIST_FILE = FartBombWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		B9B561F820924421006E5D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J488KW82;
+				IBSC_MODULE = FartBombWatchOS_Extension;
+				INFOPLIST_FILE = FartBombWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.batcloud.FartBomb.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9B561B8209243F8006E5D48 /* Build configuration list for PBXProject "FartBomb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B561CD209243FB006E5D48 /* Debug */,
+				B9B561CE209243FB006E5D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B561CF209243FB006E5D48 /* Build configuration list for PBXNativeTarget "FartBomb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B561D0209243FB006E5D48 /* Debug */,
+				B9B561D1209243FB006E5D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B561F220924421006E5D48 /* Build configuration list for PBXNativeTarget "FartBombWatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B561F320924421006E5D48 /* Debug */,
+				B9B561F420924421006E5D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B561F620924421006E5D48 /* Build configuration list for PBXNativeTarget "FartBombWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B561F720924421006E5D48 /* Debug */,
+				B9B561F820924421006E5D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9B561B5209243F8006E5D48 /* Project object */;
+}
