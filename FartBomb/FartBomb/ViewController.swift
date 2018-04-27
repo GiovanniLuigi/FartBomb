@@ -9,7 +9,8 @@
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate {
+//TODO:- Implement WCSessionDelegate
+class ViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
@@ -23,10 +24,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         brightness = DeviceManager.shared.brightness
         self.view.backgroundColor = .black
         
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
-        }
+        //TODO:- Check if WCSession is Supported, set delegate and activate
         
     }
     
@@ -57,34 +55,13 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     func sendTimer(value: Int) {
-        if WCSession.default.isReachable {
-            let message = ["timer": value]
-            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
-        }
+        let message: [String: Any] = ["timer": value] 
+        //TODO:- check if counter part i reachable
+        //TODO:- send message
     }
     
     //MARK: - WCSessionDelegate
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if let explode = message["explode"] as? Bool {
-            if explode {
-                startExplosionTimer()
-            }
-        }
-    }
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
-    
-    
+    //TODO:- implement session didReceiveMessage, startExplosionTimer if "explode" is true
     
 }
 
