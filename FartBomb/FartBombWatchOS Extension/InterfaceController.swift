@@ -42,6 +42,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.timerLabel.setText(String(timer))
                 if timer == 0 {
                     //EXPLOSION!!
+                    
                 }
             }
         }

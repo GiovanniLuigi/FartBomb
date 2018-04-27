@@ -15,11 +15,13 @@ class ViewController: UIViewController, WCSessionDelegate {
         return true
     }
     
+    var brightness: Float = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        brightness = DeviceManager.shared.brightness
         self.view.backgroundColor = .black
-        DeviceManager.shared.brightness = 0
         
         if WCSession.isSupported() {
             WCSession.default.delegate = self
@@ -28,7 +30,17 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
-    func startExplosionTimer(){
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DeviceManager.shared.brightness = 0
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        DeviceManager.shared.brightness = self.brightness
+    }
+    
+    func startExplosionTimer() {
         DispatchQueue.main.async {
             var count = 5
             self.sendTimer(value: count)
@@ -44,7 +56,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    func sendTimer(value: Int){
+    func sendTimer(value: Int) {
         if WCSession.default.isReachable {
             let message = ["timer": value]
             WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
